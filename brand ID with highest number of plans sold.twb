@@ -1,0 +1,628 @@
+<?xml version='1.0' encoding='utf-8' ?>
+
+<!-- build 20191.19.0213.2333                               -->
+<workbook original-version='18.1' source-build='2019.1.0 (20191.19.0213.2333)' source-platform='win' version='18.1' xmlns:user='http://www.tableausoftware.com/xml/user'>
+  <document-format-change-manifest>
+    <SheetIdentifierTracking />
+    <WindowsPersistSimpleIdentifiers />
+  </document-format-change-manifest>
+  <preferences>
+    <preference name='ui.encoding.shelf.height' value='24' />
+    <preference name='ui.shelf.height' value='26' />
+  </preferences>
+  <datasources>
+    <datasource caption='sold_plan+ (servify_assignment)' inline='true' name='federated.1j9lvbu1ldsyjx1b4rbhg1jw4cjf' version='18.1'>
+      <connection class='federated'>
+        <named-connections>
+          <named-connection caption='52.66.79.237' name='mysql.0lkzide0gh8xga1biw0ab003j3qe'>
+            <connection class='mysql' dbname='servify_assignment' odbc-native-protocol='' one-time-sql='' port='3306' server='52.66.79.237' source-charset='' username='candidate' />
+          </named-connection>
+        </named-connections>
+        <relation join='inner' type='join'>
+          <clause type='join'>
+            <expression op='='>
+              <expression op='[sold_plan].[ConsumerID]' />
+              <expression op='[consumer_product].[ConsumerID]' />
+            </expression>
+          </clause>
+          <relation connection='mysql.0lkzide0gh8xga1biw0ab003j3qe' name='sold_plan' table='[sold_plan]' type='table' />
+          <relation connection='mysql.0lkzide0gh8xga1biw0ab003j3qe' name='consumer_product' table='[consumer_product]' type='table' />
+        </relation>
+        <cols>
+          <map key='[BrandID]' value='[consumer_product].[BrandID]' />
+          <map key='[ConsumerID (consumer_product)]' value='[consumer_product].[ConsumerID]' />
+          <map key='[ConsumerID]' value='[sold_plan].[ConsumerID]' />
+          <map key='[ConsumerProductID (consumer_product)]' value='[consumer_product].[ConsumerProductID]' />
+          <map key='[ConsumerProductID]' value='[sold_plan].[ConsumerProductID]' />
+          <map key='[CreatedDate (consumer_product)]' value='[consumer_product].[CreatedDate]' />
+          <map key='[CreatedDate]' value='[sold_plan].[CreatedDate]' />
+          <map key='[DateOfActivation]' value='[sold_plan].[DateOfActivation]' />
+          <map key='[DateOfPurchase (consumer_product)]' value='[consumer_product].[DateOfPurchase]' />
+          <map key='[DateOfPurchase]' value='[sold_plan].[DateOfPurchase]' />
+          <map key='[FulfillerID]' value='[sold_plan].[FulfillerID]' />
+          <map key='[IMEI1]' value='[consumer_product].[IMEI1]' />
+          <map key='[IMEI2]' value='[consumer_product].[IMEI2]' />
+          <map key='[IsActive]' value='[consumer_product].[IsActive]' />
+          <map key='[PlanAmount]' value='[sold_plan].[PlanAmount]' />
+          <map key='[PlanID]' value='[sold_plan].[PlanID]' />
+          <map key='[ProductID]' value='[consumer_product].[ProductID]' />
+          <map key='[SerialNo]' value='[consumer_product].[SerialNo]' />
+          <map key='[SoldPlanID]' value='[sold_plan].[SoldPlanID]' />
+          <map key='[Source]' value='[sold_plan].[Source]' />
+          <map key='[Status]' value='[sold_plan].[Status]' />
+          <map key='[ValidityDate]' value='[sold_plan].[ValidityDate]' />
+          <map key='[WarrantyTill]' value='[consumer_product].[WarrantyTill]' />
+        </cols>
+        <metadata-records>
+          <metadata-record class='column'>
+            <remote-name>SoldPlanID</remote-name>
+            <remote-type>20</remote-type>
+            <local-name>[SoldPlanID]</local-name>
+            <parent-name>[sold_plan]</parent-name>
+            <remote-alias>SoldPlanID</remote-alias>
+            <ordinal>1</ordinal>
+            <local-type>integer</local-type>
+            <aggregation>Sum</aggregation>
+            <precision>19</precision>
+            <contains-null>true</contains-null>
+            <attributes>
+              <attribute datatype='string' name='DebugRemoteType'>&quot;SQL_BIGINT&quot;</attribute>
+              <attribute datatype='string' name='DebugWireType'>&quot;SQL_C_SBIGINT&quot;</attribute>
+            </attributes>
+          </metadata-record>
+          <metadata-record class='column'>
+            <remote-name>PlanID</remote-name>
+            <remote-type>20</remote-type>
+            <local-name>[PlanID]</local-name>
+            <parent-name>[sold_plan]</parent-name>
+            <remote-alias>PlanID</remote-alias>
+            <ordinal>2</ordinal>
+            <local-type>integer</local-type>
+            <aggregation>Sum</aggregation>
+            <precision>19</precision>
+            <contains-null>false</contains-null>
+            <attributes>
+              <attribute datatype='string' name='DebugRemoteType'>&quot;SQL_BIGINT&quot;</attribute>
+              <attribute datatype='string' name='DebugWireType'>&quot;SQL_C_SBIGINT&quot;</attribute>
+            </attributes>
+          </metadata-record>
+          <metadata-record class='column'>
+            <remote-name>PlanAmount</remote-name>
+            <remote-type>3</remote-type>
+            <local-name>[PlanAmount]</local-name>
+            <parent-name>[sold_plan]</parent-name>
+            <remote-alias>PlanAmount</remote-alias>
+            <ordinal>3</ordinal>
+            <local-type>integer</local-type>
+            <aggregation>Sum</aggregation>
+            <precision>10</precision>
+            <contains-null>true</contains-null>
+            <attributes>
+              <attribute datatype='string' name='DebugRemoteType'>&quot;SQL_INTEGER&quot;</attribute>
+              <attribute datatype='string' name='DebugWireType'>&quot;SQL_C_SLONG&quot;</attribute>
+            </attributes>
+          </metadata-record>
+          <metadata-record class='column'>
+            <remote-name>FulfillerID</remote-name>
+            <remote-type>20</remote-type>
+            <local-name>[FulfillerID]</local-name>
+            <parent-name>[sold_plan]</parent-name>
+            <remote-alias>FulfillerID</remote-alias>
+            <ordinal>4</ordinal>
+            <local-type>integer</local-type>
+            <aggregation>Sum</aggregation>
+            <precision>19</precision>
+            <contains-null>false</contains-null>
+            <attributes>
+              <attribute datatype='string' name='DebugRemoteType'>&quot;SQL_BIGINT&quot;</attribute>
+              <attribute datatype='string' name='DebugWireType'>&quot;SQL_C_SBIGINT&quot;</attribute>
+            </attributes>
+          </metadata-record>
+          <metadata-record class='column'>
+            <remote-name>ConsumerProductID</remote-name>
+            <remote-type>20</remote-type>
+            <local-name>[ConsumerProductID]</local-name>
+            <parent-name>[sold_plan]</parent-name>
+            <remote-alias>ConsumerProductID</remote-alias>
+            <ordinal>5</ordinal>
+            <local-type>integer</local-type>
+            <aggregation>Sum</aggregation>
+            <precision>19</precision>
+            <contains-null>true</contains-null>
+            <attributes>
+              <attribute datatype='string' name='DebugRemoteType'>&quot;SQL_BIGINT&quot;</attribute>
+              <attribute datatype='string' name='DebugWireType'>&quot;SQL_C_SBIGINT&quot;</attribute>
+            </attributes>
+          </metadata-record>
+          <metadata-record class='column'>
+            <remote-name>ConsumerID</remote-name>
+            <remote-type>20</remote-type>
+            <local-name>[ConsumerID]</local-name>
+            <parent-name>[sold_plan]</parent-name>
+            <remote-alias>ConsumerID</remote-alias>
+            <ordinal>6</ordinal>
+            <local-type>integer</local-type>
+            <aggregation>Sum</aggregation>
+            <precision>19</precision>
+            <contains-null>true</contains-null>
+            <attributes>
+              <attribute datatype='string' name='DebugRemoteType'>&quot;SQL_BIGINT&quot;</attribute>
+              <attribute datatype='string' name='DebugWireType'>&quot;SQL_C_SBIGINT&quot;</attribute>
+            </attributes>
+          </metadata-record>
+          <metadata-record class='column'>
+            <remote-name>DateOfPurchase</remote-name>
+            <remote-type>7</remote-type>
+            <local-name>[DateOfPurchase]</local-name>
+            <parent-name>[sold_plan]</parent-name>
+            <remote-alias>DateOfPurchase</remote-alias>
+            <ordinal>7</ordinal>
+            <local-type>datetime</local-type>
+            <aggregation>Year</aggregation>
+            <contains-null>true</contains-null>
+            <attributes>
+              <attribute datatype='string' name='DebugRemoteType'>&quot;SQL_TYPE_TIMESTAMP&quot;</attribute>
+              <attribute datatype='string' name='DebugWireType'>&quot;SQL_C_TYPE_TIMESTAMP&quot;</attribute>
+            </attributes>
+          </metadata-record>
+          <metadata-record class='column'>
+            <remote-name>DateOfActivation</remote-name>
+            <remote-type>7</remote-type>
+            <local-name>[DateOfActivation]</local-name>
+            <parent-name>[sold_plan]</parent-name>
+            <remote-alias>DateOfActivation</remote-alias>
+            <ordinal>8</ordinal>
+            <local-type>datetime</local-type>
+            <aggregation>Year</aggregation>
+            <contains-null>true</contains-null>
+            <attributes>
+              <attribute datatype='string' name='DebugRemoteType'>&quot;SQL_TYPE_TIMESTAMP&quot;</attribute>
+              <attribute datatype='string' name='DebugWireType'>&quot;SQL_C_TYPE_TIMESTAMP&quot;</attribute>
+            </attributes>
+          </metadata-record>
+          <metadata-record class='column'>
+            <remote-name>ValidityDate</remote-name>
+            <remote-type>7</remote-type>
+            <local-name>[ValidityDate]</local-name>
+            <parent-name>[sold_plan]</parent-name>
+            <remote-alias>ValidityDate</remote-alias>
+            <ordinal>9</ordinal>
+            <local-type>datetime</local-type>
+            <aggregation>Year</aggregation>
+            <contains-null>true</contains-null>
+            <attributes>
+              <attribute datatype='string' name='DebugRemoteType'>&quot;SQL_TYPE_TIMESTAMP&quot;</attribute>
+              <attribute datatype='string' name='DebugWireType'>&quot;SQL_C_TYPE_TIMESTAMP&quot;</attribute>
+            </attributes>
+          </metadata-record>
+          <metadata-record class='column'>
+            <remote-name>Status</remote-name>
+            <remote-type>16</remote-type>
+            <local-name>[Status]</local-name>
+            <parent-name>[sold_plan]</parent-name>
+            <remote-alias>Status</remote-alias>
+            <ordinal>10</ordinal>
+            <local-type>integer</local-type>
+            <aggregation>Sum</aggregation>
+            <precision>3</precision>
+            <contains-null>true</contains-null>
+            <attributes>
+              <attribute datatype='string' name='DebugRemoteType'>&quot;SQL_TINYINT&quot;</attribute>
+              <attribute datatype='string' name='DebugWireType'>&quot;SQL_C_STINYINT&quot;</attribute>
+            </attributes>
+          </metadata-record>
+          <metadata-record class='column'>
+            <remote-name>Source</remote-name>
+            <remote-type>130</remote-type>
+            <local-name>[Source]</local-name>
+            <parent-name>[sold_plan]</parent-name>
+            <remote-alias>Source</remote-alias>
+            <ordinal>11</ordinal>
+            <local-type>string</local-type>
+            <aggregation>Count</aggregation>
+            <width>255</width>
+            <contains-null>true</contains-null>
+            <collation flag='0' name='LROOT' />
+            <attributes>
+              <attribute datatype='string' name='DebugRemoteType'>&quot;SQL_WVARCHAR&quot;</attribute>
+              <attribute datatype='string' name='DebugWireType'>&quot;SQL_C_WCHAR&quot;</attribute>
+              <attribute datatype='string' name='TypeIsVarchar'>&quot;true&quot;</attribute>
+            </attributes>
+          </metadata-record>
+          <metadata-record class='column'>
+            <remote-name>CreatedDate</remote-name>
+            <remote-type>7</remote-type>
+            <local-name>[CreatedDate]</local-name>
+            <parent-name>[sold_plan]</parent-name>
+            <remote-alias>CreatedDate</remote-alias>
+            <ordinal>12</ordinal>
+            <local-type>datetime</local-type>
+            <aggregation>Year</aggregation>
+            <contains-null>false</contains-null>
+            <attributes>
+              <attribute datatype='string' name='DebugRemoteType'>&quot;SQL_TYPE_TIMESTAMP&quot;</attribute>
+              <attribute datatype='string' name='DebugWireType'>&quot;SQL_C_TYPE_TIMESTAMP&quot;</attribute>
+            </attributes>
+          </metadata-record>
+          <metadata-record class='column'>
+            <remote-name>ConsumerProductID</remote-name>
+            <remote-type>20</remote-type>
+            <local-name>[ConsumerProductID (consumer_product)]</local-name>
+            <parent-name>[consumer_product]</parent-name>
+            <remote-alias>ConsumerProductID</remote-alias>
+            <ordinal>14</ordinal>
+            <local-type>integer</local-type>
+            <aggregation>Sum</aggregation>
+            <precision>19</precision>
+            <contains-null>true</contains-null>
+            <attributes>
+              <attribute datatype='string' name='DebugRemoteType'>&quot;SQL_BIGINT&quot;</attribute>
+              <attribute datatype='string' name='DebugWireType'>&quot;SQL_C_SBIGINT&quot;</attribute>
+            </attributes>
+          </metadata-record>
+          <metadata-record class='column'>
+            <remote-name>ConsumerID</remote-name>
+            <remote-type>20</remote-type>
+            <local-name>[ConsumerID (consumer_product)]</local-name>
+            <parent-name>[consumer_product]</parent-name>
+            <remote-alias>ConsumerID</remote-alias>
+            <ordinal>15</ordinal>
+            <local-type>integer</local-type>
+            <aggregation>Sum</aggregation>
+            <precision>19</precision>
+            <contains-null>true</contains-null>
+            <attributes>
+              <attribute datatype='string' name='DebugRemoteType'>&quot;SQL_BIGINT&quot;</attribute>
+              <attribute datatype='string' name='DebugWireType'>&quot;SQL_C_SBIGINT&quot;</attribute>
+            </attributes>
+          </metadata-record>
+          <metadata-record class='column'>
+            <remote-name>BrandID</remote-name>
+            <remote-type>20</remote-type>
+            <local-name>[BrandID]</local-name>
+            <parent-name>[consumer_product]</parent-name>
+            <remote-alias>BrandID</remote-alias>
+            <ordinal>16</ordinal>
+            <local-type>integer</local-type>
+            <aggregation>Sum</aggregation>
+            <precision>19</precision>
+            <contains-null>true</contains-null>
+            <attributes>
+              <attribute datatype='string' name='DebugRemoteType'>&quot;SQL_BIGINT&quot;</attribute>
+              <attribute datatype='string' name='DebugWireType'>&quot;SQL_C_SBIGINT&quot;</attribute>
+            </attributes>
+          </metadata-record>
+          <metadata-record class='column'>
+            <remote-name>ProductID</remote-name>
+            <remote-type>20</remote-type>
+            <local-name>[ProductID]</local-name>
+            <parent-name>[consumer_product]</parent-name>
+            <remote-alias>ProductID</remote-alias>
+            <ordinal>17</ordinal>
+            <local-type>integer</local-type>
+            <aggregation>Sum</aggregation>
+            <precision>19</precision>
+            <contains-null>true</contains-null>
+            <attributes>
+              <attribute datatype='string' name='DebugRemoteType'>&quot;SQL_BIGINT&quot;</attribute>
+              <attribute datatype='string' name='DebugWireType'>&quot;SQL_C_SBIGINT&quot;</attribute>
+            </attributes>
+          </metadata-record>
+          <metadata-record class='column'>
+            <remote-name>IMEI1</remote-name>
+            <remote-type>130</remote-type>
+            <local-name>[IMEI1]</local-name>
+            <parent-name>[consumer_product]</parent-name>
+            <remote-alias>IMEI1</remote-alias>
+            <ordinal>18</ordinal>
+            <local-type>string</local-type>
+            <aggregation>Count</aggregation>
+            <width>50</width>
+            <contains-null>true</contains-null>
+            <collation flag='0' name='LROOT' />
+            <attributes>
+              <attribute datatype='string' name='DebugRemoteType'>&quot;SQL_WVARCHAR&quot;</attribute>
+              <attribute datatype='string' name='DebugWireType'>&quot;SQL_C_WCHAR&quot;</attribute>
+              <attribute datatype='string' name='TypeIsVarchar'>&quot;true&quot;</attribute>
+            </attributes>
+          </metadata-record>
+          <metadata-record class='column'>
+            <remote-name>IMEI2</remote-name>
+            <remote-type>130</remote-type>
+            <local-name>[IMEI2]</local-name>
+            <parent-name>[consumer_product]</parent-name>
+            <remote-alias>IMEI2</remote-alias>
+            <ordinal>19</ordinal>
+            <local-type>string</local-type>
+            <aggregation>Count</aggregation>
+            <width>50</width>
+            <contains-null>true</contains-null>
+            <collation flag='0' name='LROOT' />
+            <attributes>
+              <attribute datatype='string' name='DebugRemoteType'>&quot;SQL_WVARCHAR&quot;</attribute>
+              <attribute datatype='string' name='DebugWireType'>&quot;SQL_C_WCHAR&quot;</attribute>
+              <attribute datatype='string' name='TypeIsVarchar'>&quot;true&quot;</attribute>
+            </attributes>
+          </metadata-record>
+          <metadata-record class='column'>
+            <remote-name>SerialNo</remote-name>
+            <remote-type>130</remote-type>
+            <local-name>[SerialNo]</local-name>
+            <parent-name>[consumer_product]</parent-name>
+            <remote-alias>SerialNo</remote-alias>
+            <ordinal>20</ordinal>
+            <local-type>string</local-type>
+            <aggregation>Count</aggregation>
+            <width>50</width>
+            <contains-null>true</contains-null>
+            <collation flag='0' name='LROOT' />
+            <attributes>
+              <attribute datatype='string' name='DebugRemoteType'>&quot;SQL_WVARCHAR&quot;</attribute>
+              <attribute datatype='string' name='DebugWireType'>&quot;SQL_C_WCHAR&quot;</attribute>
+              <attribute datatype='string' name='TypeIsVarchar'>&quot;true&quot;</attribute>
+            </attributes>
+          </metadata-record>
+          <metadata-record class='column'>
+            <remote-name>DateOfPurchase</remote-name>
+            <remote-type>7</remote-type>
+            <local-name>[DateOfPurchase (consumer_product)]</local-name>
+            <parent-name>[consumer_product]</parent-name>
+            <remote-alias>DateOfPurchase</remote-alias>
+            <ordinal>21</ordinal>
+            <local-type>date</local-type>
+            <aggregation>Year</aggregation>
+            <contains-null>true</contains-null>
+            <attributes>
+              <attribute datatype='string' name='DebugRemoteType'>&quot;SQL_TYPE_DATE&quot;</attribute>
+              <attribute datatype='string' name='DebugWireType'>&quot;SQL_C_TYPE_DATE&quot;</attribute>
+            </attributes>
+          </metadata-record>
+          <metadata-record class='column'>
+            <remote-name>WarrantyTill</remote-name>
+            <remote-type>7</remote-type>
+            <local-name>[WarrantyTill]</local-name>
+            <parent-name>[consumer_product]</parent-name>
+            <remote-alias>WarrantyTill</remote-alias>
+            <ordinal>22</ordinal>
+            <local-type>date</local-type>
+            <aggregation>Year</aggregation>
+            <contains-null>true</contains-null>
+            <attributes>
+              <attribute datatype='string' name='DebugRemoteType'>&quot;SQL_TYPE_DATE&quot;</attribute>
+              <attribute datatype='string' name='DebugWireType'>&quot;SQL_C_TYPE_DATE&quot;</attribute>
+            </attributes>
+          </metadata-record>
+          <metadata-record class='column'>
+            <remote-name>IsActive</remote-name>
+            <remote-type>16</remote-type>
+            <local-name>[IsActive]</local-name>
+            <parent-name>[consumer_product]</parent-name>
+            <remote-alias>IsActive</remote-alias>
+            <ordinal>23</ordinal>
+            <local-type>integer</local-type>
+            <aggregation>Sum</aggregation>
+            <precision>3</precision>
+            <contains-null>true</contains-null>
+            <attributes>
+              <attribute datatype='string' name='DebugRemoteType'>&quot;SQL_TINYINT&quot;</attribute>
+              <attribute datatype='string' name='DebugWireType'>&quot;SQL_C_STINYINT&quot;</attribute>
+            </attributes>
+          </metadata-record>
+          <metadata-record class='column'>
+            <remote-name>CreatedDate</remote-name>
+            <remote-type>7</remote-type>
+            <local-name>[CreatedDate (consumer_product)]</local-name>
+            <parent-name>[consumer_product]</parent-name>
+            <remote-alias>CreatedDate</remote-alias>
+            <ordinal>24</ordinal>
+            <local-type>datetime</local-type>
+            <aggregation>Year</aggregation>
+            <contains-null>true</contains-null>
+            <attributes>
+              <attribute datatype='string' name='DebugRemoteType'>&quot;SQL_TYPE_TIMESTAMP&quot;</attribute>
+              <attribute datatype='string' name='DebugWireType'>&quot;SQL_C_TYPE_TIMESTAMP&quot;</attribute>
+            </attributes>
+          </metadata-record>
+        </metadata-records>
+      </connection>
+      <aliases enabled='yes' />
+      <column caption='Brand ID' datatype='integer' name='[BrandID]' role='dimension' type='ordinal' />
+      <column caption='Calculation1' datatype='integer' name='[Calculation_168040599731200000]' role='measure' type='quantitative'>
+        <calculation class='tableau' formula='max([Number of Records])' />
+      </column>
+      <column caption='ConsumerID (consumer product)' datatype='integer' name='[ConsumerID (consumer_product)]' role='dimension' type='ordinal' />
+      <column caption='Consumer ID' datatype='integer' name='[ConsumerID]' role='dimension' type='ordinal' />
+      <column caption='ConsumerProductID (consumer product)' datatype='integer' name='[ConsumerProductID (consumer_product)]' role='dimension' type='ordinal' />
+      <column caption='Consumer Product ID' datatype='integer' name='[ConsumerProductID]' role='dimension' type='ordinal' />
+      <column caption='CreatedDate (consumer product)' datatype='datetime' name='[CreatedDate (consumer_product)]' role='dimension' type='ordinal' />
+      <column caption='Created Date' datatype='datetime' name='[CreatedDate]' role='dimension' type='ordinal' />
+      <column caption='Date Of Activation' datatype='datetime' name='[DateOfActivation]' role='dimension' type='ordinal' />
+      <column caption='DateOfPurchase (consumer product)' datatype='date' name='[DateOfPurchase (consumer_product)]' role='dimension' type='ordinal' />
+      <column caption='Date Of Purchase' datatype='datetime' name='[DateOfPurchase]' role='dimension' type='ordinal' />
+      <column caption='Fulfiller ID' datatype='integer' name='[FulfillerID]' role='dimension' type='ordinal' />
+      <column caption='Imei1' datatype='string' name='[IMEI1]' role='dimension' type='nominal' />
+      <column caption='Imei2' datatype='string' name='[IMEI2]' role='dimension' type='nominal' />
+      <column caption='Is Active' datatype='integer' name='[IsActive]' role='measure' type='quantitative' />
+      <column datatype='integer' name='[Number of Records]' role='measure' type='quantitative' user:auto-column='numrec'>
+        <calculation class='tableau' formula='1' />
+      </column>
+      <column caption='Plan Amount' datatype='integer' name='[PlanAmount]' role='measure' type='quantitative' />
+      <column caption='Plan ID' datatype='integer' name='[PlanID]' role='dimension' type='ordinal' />
+      <column caption='Product ID' datatype='integer' name='[ProductID]' role='dimension' type='ordinal' />
+      <column caption='Serial No' datatype='string' name='[SerialNo]' role='dimension' type='nominal' />
+      <column caption='Sold Plan ID' datatype='integer' name='[SoldPlanID]' role='dimension' type='ordinal' />
+      <column caption='Validity Date' datatype='datetime' name='[ValidityDate]' role='dimension' type='ordinal' />
+      <column caption='Warranty Till' datatype='date' name='[WarrantyTill]' role='dimension' type='ordinal' />
+      <layout dim-ordering='alphabetic' dim-percentage='0.698992' measure-ordering='alphabetic' measure-percentage='0.301008' rowDisplayCount='50000' show-structure='true' />
+      <semantic-values>
+        <semantic-value key='[Country].[Name]' value='&quot;United States&quot;' />
+      </semantic-values>
+    </datasource>
+  </datasources>
+  <worksheets>
+    <worksheet name='Sheet 1'>
+      <layout-options>
+        <title>
+          <formatted-text>
+            <run bold='true'>Brand ID with highest number of plan sold</run>
+          </formatted-text>
+        </title>
+      </layout-options>
+      <table>
+        <view>
+          <datasources>
+            <datasource caption='sold_plan+ (servify_assignment)' name='federated.1j9lvbu1ldsyjx1b4rbhg1jw4cjf' />
+          </datasources>
+          <datasource-dependencies datasource='federated.1j9lvbu1ldsyjx1b4rbhg1jw4cjf'>
+            <column caption='Brand ID' datatype='integer' name='[BrandID]' role='dimension' type='ordinal' />
+            <column datatype='integer' name='[Number of Records]' role='measure' type='quantitative' user:auto-column='numrec'>
+              <calculation class='tableau' formula='1' />
+            </column>
+            <column-instance column='[BrandID]' derivation='None' name='[none:BrandID:ok]' pivot='key' type='ordinal' />
+            <column-instance column='[Number of Records]' derivation='Sum' name='[sum:Number of Records:qk]' pivot='key' type='quantitative' />
+          </datasource-dependencies>
+          <filter class='categorical' column='[federated.1j9lvbu1ldsyjx1b4rbhg1jw4cjf].[none:BrandID:ok]'>
+            <groupfilter function='union' user:ui-domain='database' user:ui-enumeration='inclusive' user:ui-marker='enumerate'>
+              <groupfilter function='member' level='[none:BrandID:ok]' member='16' />
+              <groupfilter function='member' level='[none:BrandID:ok]' member='86' />
+            </groupfilter>
+          </filter>
+          <slices>
+            <column>[federated.1j9lvbu1ldsyjx1b4rbhg1jw4cjf].[none:BrandID:ok]</column>
+          </slices>
+          <aggregation value='true' />
+        </view>
+        <style>
+          <style-rule element='title'>
+            <format attr='background-color' value='#fefaf1' />
+            <format attr='border-style' value='solid' />
+            <format attr='border-color' value='#ffffff' />
+          </style-rule>
+        </style>
+        <panes>
+          <pane selection-relaxation-option='selection-relaxation-allow'>
+            <view>
+              <breakdown value='auto' />
+            </view>
+            <mark class='Automatic' />
+            <encodings>
+              <text column='[federated.1j9lvbu1ldsyjx1b4rbhg1jw4cjf].[sum:Number of Records:qk]' />
+            </encodings>
+            <style>
+              <style-rule element='mark'>
+                <format attr='mark-labels-show' value='true' />
+                <format attr='mark-labels-cull' value='true' />
+              </style-rule>
+            </style>
+          </pane>
+        </panes>
+        <rows>[federated.1j9lvbu1ldsyjx1b4rbhg1jw4cjf].[sum:Number of Records:qk]</rows>
+        <cols>[federated.1j9lvbu1ldsyjx1b4rbhg1jw4cjf].[none:BrandID:ok]</cols>
+      </table>
+      <simple-id uuid='{B749FDA4-E13B-49C1-932E-25BC424E5F5A}' />
+    </worksheet>
+  </worksheets>
+  <windows source-height='30'>
+    <window class='worksheet' maximized='true' name='Sheet 1'>
+      <cards>
+        <edge name='left'>
+          <strip size='160'>
+            <card type='pages' />
+            <card type='filters' />
+            <card type='marks' />
+          </strip>
+        </edge>
+        <edge name='top'>
+          <strip size='2147483647'>
+            <card type='columns' />
+          </strip>
+          <strip size='2147483647'>
+            <card type='rows' />
+          </strip>
+          <strip size='31'>
+            <card type='title' />
+          </strip>
+        </edge>
+      </cards>
+      <viewpoint>
+        <highlight>
+          <color-one-way>
+            <field>[federated.1j9lvbu1ldsyjx1b4rbhg1jw4cjf].[none:SoldPlanID:ok]</field>
+          </color-one-way>
+        </highlight>
+      </viewpoint>
+      <simple-id uuid='{A124A6FB-D526-4EB3-B1A8-4679D32769A7}' />
+    </window>
+  </windows>
+  <thumbnails>
+    <thumbnail height='192' name='Sheet 1' width='183'>
+      iVBORw0KGgoAAAANSUhEUgAAALcAAADACAYAAABGSfLmAAAACXBIWXMAAA7DAAAOwwHHb6hk
+      AAANrUlEQVR4nO3df1DU953H8RcsyG9FKaCgJgdKLJdcnUCIUa40g7GGQmIOIx2a6hgjolxs
+      qvFKjBEiMaW9DNH80IDE5Kj1lMgpmmBzg42MosYuia2K1hOKREQ0UBiWBdxdPvfHoiwsampY
+      9us7r8eMo3w/3+9+P5+ZJ9/57P7huiilFIgEcnX2BIgchXGTWIybxGLcJBbjJrEYN4nFuEks
+      xk1iMW4Si3GTWIybxGLcJBbjJrEYt6bVomBeNKKjr/+Zhrgnn8PGylYH37ccmdHzUFA72PFo
+      ZJZfn14B5kX3zW9G/DPI+sNFmB08u2+Kcd8FZubqodfroddX4L+eUvjvl9/BMWdP6oaZyNXr
+      oddXoiQnBn/LmYv5W+1+K5yCcd9VPHDvDx/GRIMBBmdPxY4Hxk5fjrdWRaO26Heo1MDjm3Hf
+      Rcwd57FrYzFaZs/GNAA3tg/nzmH7stmYNq8AtbiCstXJiJ9xfauwGJv+0vurUFuAedHp+G3B
+      cjwZNw1z3zh245ek9YsCLE+cYb0mcQP0dzhH/8RExBr+jD9r4OHNuO8C5ZnWUKfFPYttI/8d
+      77/yI/jeGDXg4Guvozb5Q1QUpyEMwPg56/E/f9RDrz+G0sU6bM0tRv2N8zvhFfMrbD9wDMYd
+      e6zbG8M+ZC0rhvfSElTq9ajYuRgP3Olk3dzghnrU19/+VEdzc/YE6PZm5uqROxNAdxvO7luL
+      RT85hdf+sAbT3ADAiJDUDVgT79979giYT2zC/FXH0dDRuzcIe9DmTd44fH9qKHyAvl+QY5Wo
+      nDgPxT8ZCw8A8PGx/n0nzGaYMRFhE+/0BYYOn9x3E49RmDI3CdGtx3H83PWDQYiI8O8759g7
+      WLF9BJ7dWWF9E5o7c1inaNi/H4d9f4AfhA3rbQfFuO8q3bj8STn0bmMx9ns3OaWrC13eYzBu
+      tAfMHefxxyPfYPMbGYnI2nJ8/JcOmNGNtrN1aLyTuR0pwIqNnyMybTFmaGBPoIEp0O2UZ0Yj
+      uvffHqOmIOk3G/BvQTc5OXY+0ooWY/mMvfCY9EMsenDM7W8Qkoo1K/RYsTQORRYfTPrxI//A
+      tsT62TcAeIydiqQXd+HF2SHf+GpHcuF/7UBScVtCYjFuEotxk1iMm8Ri3DaMRqOzp0BDiHGT
+      WIybxGLcJBbjJrEYN4nFuEksxk1iMW4Si3GTWIybxGLcJBbjJrEYN4nFuEksxk1iMW4Si3GT
+      WIybxGLcJBbjJrEYN4nFuEksxk1iMW4Si3GTWIybxGLcJBbjJrEYN4nFuEksxk1iMW4Si3GT
+      WIybxGLcJBbjJrEYN4nFuEksxj0MSktL4e3tDRcXF7i6umLy5Mloa2tDcXExXF1d4eLi0u+P
+      v78/Lly4AJ1OZzc2YsQIXLhwwdlLuilNrVVp2bVGdXTra+qXGWkqLS1D/fI/d6m/tt8YVHWf
+      blSrly9VaWlL1fJXt6rPr5hvXGq+cki9l5nRO/Z7dbJ90Dv009HRMeRLqK+vV76+viozM1MZ
+      jUZ1/vx5FRwcrBYsWDDo+bNmzVKpqamDjq1cuVJFRUUN+RyHitbWqum4v9y6VhUe/D/VfE0p
+      Ze5UFw9sUC8VnbYOni5SL204oC52mpVS11TzqZ1q3Zpd6m9KKaUa1N5169TOM63KrK6pxoNv
+      qVVvVSrjbe7niLgtFosyGAz9jq1cuVLNmTPH7tza2loVFBSkGhsb7cYMBoMKDQ1Vhw4dGvI5
+      DhWtrVXTcZvN5gEHPleb8vVKKaUuf7JO9f6z1zV19J18pVdKqfM7VdaHJ1Xf1V+rT1/foA7d
+      pm5HxD3QqVOnVGBgoCorK7Mbe/rpp9Vjjz026HW5ubkqPDzc0dMbUs5eq6bj7q9d/XVnntr6
+      ZW+hX5erN9bvUTU2T+68rV9an876fLVhQMlf7XlH7fnq1ndwZNwWi0Xl5OQoPz8/VV5ebjfe
+      0NCggoKCVHV1td2Y0WhU99xzj/roo48cNr+hpJW1ug3dWwnHsbSdxZ4tHwNPpGNhhJf1YEA8
+      lj9Thrz/WIbabmDk9+fh+Yyp8ALQ3d0NLy+vfq/h6noVTU0Axlt/vtn3vLe3tw/5/M1mM+bO
+      nYvGxkacOXMGI0eOtLtPdnY2QkNDMX78eLuxoqIimEwmxMfHO2R+Q0lTa/3Wvx4Odq1ur9q4
+      ca/NG0kr81d7Vd67B2323HtVXt4nqkEpzT25U1JSVEJCgjKZTIOOt7a2qqCgoEH3mN3d3Soi
+      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
+      GaMhAAAAAElFTkSuQmCC
+    </thumbnail>
+  </thumbnails>
+</workbook>
