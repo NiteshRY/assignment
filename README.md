@@ -1,4 +1,4 @@
-# assignment
+# Assignment
 
 1.average number of plans sold per week
 
